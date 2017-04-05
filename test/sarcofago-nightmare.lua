@@ -34,7 +34,7 @@ pointer = 0
 drum = true
 bass = true 
 synthesizer = true
-guitar = true
+guitar = false
 
 -- verses
 function synth_1 ()
@@ -103,10 +103,18 @@ end
 function synth_2 ()
   note_e2(pointer,high_d(),high_v(),4,1)
   note_e3(pointer,high_d(),high_v(),4,1)
+note_f4(pointer+200,medium_d(),low_v(),4,1)
+note_e4(pointer+300,medium_d(),low_v(),4,1)
   note_e2(pointer+400,high_d(),high_v(),4,1)
   note_e3(pointer+400,high_d(),high_v(),4,1)
   note_e2(pointer+800,high_d(),high_v(),4,1)
   note_e3(pointer+800,high_d(),high_v(),4,1)
+note_f4(pointer+1000,medium_d(),low_v(),4,1)
+note_e4(pointer+1100,medium_d(),low_v(),4,1)
+	pointer = pointer + 1200
+end
+
+function guitar_2 ()
 	pointer = pointer + 1200
 end
 
@@ -122,6 +130,10 @@ function drums_2 ()
 end
 
 function bass_3 ()
+	pointer = pointer + 800
+end
+
+function guitar_3 ()
 	pointer = pointer + 800
 end
 
@@ -154,6 +166,10 @@ function bass_4 ()
 	pointer = pointer + 800
 end
 
+function guitar_4 ()
+	pointer = pointer + 800
+end
+
 function synth_4 ()
 	pointer = pointer + 800
 end
@@ -178,7 +194,7 @@ function drums_4 ()
 end
 
 -- tempo and instruments
-my_score = { 94, -- tempo
+my_score = { 32, -- tempo
 { -- drums, position 2, channel 9
 {'patch_change', 0, 9, 0},
 },
@@ -197,7 +213,7 @@ my_score = { 94, -- tempo
 drums_score = {1,2,2,2,1,2,2,2,1,2,2,2,1,3,4,3,4,3,4,3,4,2,2,2,1,2,2,2,1,2,2,2,1}
 bass_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 synthesizer_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
-guitar_score = { 1 }
+guitar_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 
 -- write MIDI file
 render()

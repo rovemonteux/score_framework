@@ -159,3 +159,11 @@ end
 function note_d4 (timeline, noteduration, notevelocity, position, channel)
 	table.insert(my_score[position], {'note', timeline, noteduration, channel, 62, notevelocity})
 end
+
+function note_e4 (timeline, noteduration, notevelocity, position, channel)
+	table.insert(my_score[position], {'note', timeline, noteduration, channel, 63, notevelocity})
+end
+
+function note_f4 (timeline, noteduration, notevelocity, position, channel)
+	table.insert(my_score[position], {'note', timeline, noteduration, channel, 64, notevelocity})
+end
