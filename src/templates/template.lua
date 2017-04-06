@@ -21,6 +21,7 @@ local MIDI = require 'MIDI'
 package.path = package.path .. ";../src/?.lua"
 require 'instruments/drums'
 require 'instruments/bass'
+require 'instruments/guitar'
 require 'instruments/patches'
 require 'data/duration'
 require 'data/velocity'
@@ -48,7 +49,7 @@ function bass_1 ()
 end
 
 function guitar_1 ()
-	note_f3(pointer,high_d(),high_v(),5,2)
+	guitar_0_0(pointer,high_d(),high_v(),5,2)
 	pointer = pointer + 400
 end
 
