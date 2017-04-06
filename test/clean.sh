@@ -1,2 +1,2 @@
 #!/bin/sh
-rm *.mid *.wav *.mp3
+rm *.txt *.mid *.wav *.mp3

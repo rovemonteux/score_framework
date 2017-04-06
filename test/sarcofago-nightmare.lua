@@ -34,7 +34,7 @@ pointer = 0
 drum = true
 bass = true 
 synthesizer = true
-guitar = false
+guitar = true
 
 -- verses
 function drums_0 ()
@@ -293,7 +293,7 @@ my_score = { 120, -- tempo
 }
 
 -- song structure
-drums_score = {0,1,21,2,2,1,2,2,2,1,2,2,21,1,3,4,31,4,31,4,3,4,21,21,2,1,2,2,2,1,21,21,21,1}
+drums_score = {1,21,2,2,1,2,2,2,1,2,2,21,1,3,4,31,4,31,4,3,4,21,21,2,1,2,2,2,1,21,21,21,1}
 bass_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 synthesizer_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 guitar_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}

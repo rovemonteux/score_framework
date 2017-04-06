@@ -16,6 +16,8 @@
 ---- with this program; if not, see <http://www.gnu.org/licenses/>.
 ---------------------------------------------------------------------------------
 
+-- todo: render each instrument to a separate midi file.
+
 function render()
 
 table.insert(my_score[3], {'note', 0, 200, 1, 0, 0})
@@ -30,7 +32,7 @@ end
 
 if (bass) then
   print('Rendering bass')
-pointer = 400
+pointer = 200
 for i, part in ipairs(bass_score) do
   _G['bass_' .. part]()
 end
@@ -38,7 +40,7 @@ end
 
 if (synthesizer) then
   print('Rendering synthesizer')
-pointer = 400
+pointer = 200
 for i, part in ipairs(synthesizer_score) do
   _G['synth_' .. part]()
 end
