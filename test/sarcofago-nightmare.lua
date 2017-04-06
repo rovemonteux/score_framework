@@ -123,6 +123,9 @@ function synth_2 ()
 end
 
 function guitar_2 ()
+	 guitar_0_0(pointer,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+100,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+150,medium_d(),high_v(),5,2)
 	pointer = pointer + 1200
 end
 
