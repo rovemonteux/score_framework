@@ -30,7 +30,7 @@ end
 
 if (bass) then
   print('Rendering bass')
-pointer = 200
+pointer = 400
 for i, part in ipairs(bass_score) do
   _G['bass_' .. part]()
 end
@@ -38,7 +38,7 @@ end
 
 if (synthesizer) then
   print('Rendering synthesizer')
-pointer = 200
+pointer = 400
 for i, part in ipairs(synthesizer_score) do
   _G['synth_' .. part]()
 end

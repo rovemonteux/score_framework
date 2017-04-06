@@ -23,12 +23,12 @@ end
 
 function medium_v ()
 	velocity_randomseed()
-	return math.random(51, 90)
+	return math.random(51, 80)
 end
 
 function high_v ()
 	velocity_randomseed()
-	return math.random(91, 128)
+	return math.random(81, 127)
 end
 
 function velocity_randomseed ()

@@ -48,15 +48,15 @@ function snare (timeline)
 end
 
 function lowtom (timeline)
-	table.insert(my_score[2], {'note', timeline, medium_d(), 9, instrument_lowtom, high_v()})
+	table.insert(my_score[2], {'note', timeline, medium_d(), 9, instrument_lowtom, medium_v()})
 end
 
 function mediumtom (timeline)
-	table.insert(my_score[2], {'note', timeline, medium_d(), 9, instrument_midtom, high_v()})
+	table.insert(my_score[2], {'note', timeline, medium_d(), 9, instrument_midtom, medium_v()})
 end
 
 function hightom (timeline)
-	table.insert(my_score[2], {'note', timeline, medium_d(), 9, instrument_hightom, high_v()})
+	table.insert(my_score[2], {'note', timeline, medium_d(), 9, instrument_hightom, medium_v()})
 end
 
 function ride1 (timeline)
@@ -84,11 +84,11 @@ function pedalcymbal (timeline)
 end
 
 function opencymbal (timeline)
-	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_opencymbal, medium_v()})
+	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_opencymbal, high_v()})
 end
 
 function closedcymbal (timeline)
-	table.insert(my_score[2], {'note', timeline, low_d(), 9, instrument_closedcymbal, medium_v()})
+	table.insert(my_score[2], {'note', timeline, low_d(), 9, instrument_closedcymbal, high_v()})
 end
 
 function doublekick (timeline, timelenght)
@@ -111,5 +111,27 @@ function rideconduction (timeline, timelenght)
 	for i=timeline,timeline+timelenght,100
 	do 
 		ride1(i)
+	end
+end
+
+function virada (timeline, timelenght)
+	for i=timeline,timeline+timelenght,100
+	do 
+		hightom(i-100)
+    hightom(i-75)
+    mediumtom(i-50)
+    mediumtom(i-25)
+    lowtom(i)
+	end
+end
+
+function viradalenta (timeline, timelenght)
+	for i=timeline,timeline+timelenght,100
+	do 
+		hightom(i-100)
+    mediumtom(i-100)
+    mediumtom(i-50)
+    mediumtom(i)
+    lowtom(i)
 	end
 end
