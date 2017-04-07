@@ -341,6 +341,12 @@ function guitar_chord_0_10 (timeline, noteduration, notevelocity, position, chan
   guitar_2_12 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function guitar_chord_1_0 (timeline, noteduration, notevelocity, position, channel)
+	guitar_1_0 (timeline, noteduration, notevelocity, position, channel)
+  guitar_2_2 (timeline, noteduration, notevelocity, position, channel)
+  guitar_3_2 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function guitar_chord_1_1 (timeline, noteduration, notevelocity, position, channel)
 	guitar_1_1 (timeline, noteduration, notevelocity, position, channel)
   guitar_2_3 (timeline, noteduration, notevelocity, position, channel)

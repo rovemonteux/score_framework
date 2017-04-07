@@ -320,7 +320,7 @@ function drums_4 ()
 end
 
 -- tempo and instruments
-my_score = { 120, -- tempo
+my_score = { 92, -- tempo
 { -- drums, position 2, channel 9
 {'patch_change', 0, 9, 0},
 },
