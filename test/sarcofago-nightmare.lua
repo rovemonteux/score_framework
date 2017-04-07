@@ -60,8 +60,8 @@ function bass_1 ()
 end
 
 function guitar_1 ()
-	guitar_chord_0_1(pointer,high_d(),high_v(),5,2)
-	guitar_chord_0_0(pointer+200,high_d(),high_v(),5,2)	
+	guitar_0_8(pointer,high_d(),high_v(),5,2)
+	guitar_0_7(pointer+200,high_d(),high_v(),5,2)	
 	pointer = pointer + 400
 end
 
@@ -123,9 +123,24 @@ function synth_2 ()
 end
 
 function guitar_2 ()
-	 guitar_0_0(pointer,medium_d(),high_v(),5,2)
+	guitar_0_0(pointer,medium_d(),high_v(),5,2)
   guitar_0_0(pointer+100,medium_d(),high_v(),5,2)
   guitar_0_0(pointer+150,medium_d(),high_v(),5,2)
+  guitar_1_8(pointer+200,medium_d(),high_v(),5,2)
+  guitar_1_7(pointer+300,medium_d(),high_v(),5,2)
+  
+  guitar_0_0(pointer+400,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+500,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+550,medium_d(),high_v(),5,2)
+  guitar_chord_0_7(pointer+600,medium_d(),high_v(),5,2)
+  guitar_chord_0_8(pointer+650,medium_d(),high_v(),5,2)
+  guitar_1_7(pointer+700,medium_d(),high_v(),5,2)
+  
+  guitar_0_0(pointer+800,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+900,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+950,medium_d(),high_v(),5,2)
+  guitar_chord_1_8(pointer+1000,medium_d(),high_v(),5,2)
+  guitar_chord_1_7(pointer+1100,medium_d(),high_v(),5,2)
 	pointer = pointer + 1200
 end
 
@@ -179,6 +194,19 @@ function bass_3 ()
 end
 
 function guitar_3 ()
+  guitar_0_0(pointer,high_d(),high_v(),5,2)
+  guitar_1_8(pointer+100,medium_d(),high_v(),5,2)
+  guitar_1_7(pointer+150,medium_d(),high_v(),5,2)
+  guitar_0_1(pointer+200,high_d(),high_v(),5,2)
+  guitar_1_2(pointer+250,high_d(),high_v(),5,2)
+  guitar_1_8(pointer+300,medium_d(),high_v(),5,2)
+  guitar_1_7(pointer+350,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+400,high_d(),high_v(),5,2)
+  guitar_1_8(pointer+450,high_d(),high_v(),5,2)
+  guitar_1_7(pointer+600,medium_d(),high_v(),5,2)
+  guitar_0_0(pointer+650,medium_d(),high_v(),5,2)
+  guitar_1_8(pointer+700,medium_d(),high_v(),5,2)
+  guitar_1_5(pointer+750,medium_d(),high_v(),5,2)
 	pointer = pointer + 800
 end
 
