@@ -16,8 +16,6 @@
 ---- with this program; if not, see <http://www.gnu.org/licenses/>.
 ---------------------------------------------------------------------------------
 
--- todo: render each instrument to a separate midi file.
-
 function render()
 
 table.insert(my_score[3], {'note', 0, 200, 1, 0, 0})
