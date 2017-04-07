@@ -6,6 +6,7 @@ apt-get install normalize-audio
 apt-get install sox
 apt-get install lame
 apt-get install curl
+apt-get install libcurl4-openssl-dev
 luarocks install midi
 luarocks install luacurl
 luarocks install Lua-cURL --server=https://rocks.moonscript.org/dev 
