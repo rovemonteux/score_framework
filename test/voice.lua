@@ -1,7 +1,27 @@
+-------------------------------------------------------------------------------
+---- Score Framework - A Lua-based framework for creating multi-track MIDI files.
+---- Copyright (c) 2017 Rove Monteux
+----
+---- This program is free software; you can redistribute it and/or modify it
+---- under the terms of the GNU General Public License as published by the Free
+---- Software Foundation; either version 3 of the License, or (at your option)
+---- any later version.
+----
+---- This program is distributed in the hope that it will be useful, but WITHOUT
+---- ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+---- FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+---- more details.
+----
+---- You should have received a copy of the GNU General Public License along
+---- with this program; if not, see <http://www.gnu.org/licenses/>.
+---------------------------------------------------------------------------------
+
+package.path = package.path .. ";../src/?.lua"
+
 local curl = require "luacurl"
 local c = curl.new()
 
-function GET(url, filename)    
+function GET(url)    
     c:setopt(curl.OPT_URL, url)
     local t = {} -- this will collect resulting chunks
     c:setopt(curl.OPT_WRITEFUNCTION, function (param, buf)
@@ -14,10 +34,6 @@ function GET(url, filename)
     c:setopt(curl.OPT_NOPROGRESS, false) -- use this to activate progress
     assert(c:perform())
 	-- tprint(t)
-	print(table.concat(t))
-	wavfile = io.open(filename)
-	wavfile:write(table.concat(t))
-	wavfile:close()
 	return table.concat(t) -- return the whole data as a string
 end
 
@@ -48,6 +64,9 @@ urladdress = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q
 
 print("Retrieving " .. urladdress)
 
-local s = GET(urladdress,"voice.wav")
+local s = GET(urladdress)
+local wavfile = io.open("voice.wav")
+wavfile:write(s)
+wavfile:close()
 print(s)
 
