@@ -61,7 +61,7 @@ end
 -- tempo and instruments
 my_score = { 94, -- tempo
 { -- drums, position 2, channel 9
-{'patch_change', 0, 9, 114},
+{'patch_change', 0, 9, 0},
 },
 { -- bass, position 3, channel 0
 {'patch_change', 0, 0, 35}, 
@@ -75,10 +75,10 @@ my_score = { 94, -- tempo
 }
 
 -- song structure
-drums_score = { 1 }
-bass_score = { 1 }
-synthesizer_score = { 1 }
-guitar_score = { 1 }
+d_score = { 1 }
+b_score = { 1 }
+s_score = { 1 }
+g_score = { 1 }
 
 -- write MIDI file
 render()

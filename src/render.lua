@@ -18,36 +18,34 @@
 
 function render()
 
-table.insert(my_score[3], {'note', 0, 200, 1, 0, 0})
-
 if (drum) then
   print('Rendering drum')
-pointer = 200
-for i, part in ipairs(drums_score) do
+pointer = 0
+for i, part in ipairs(d_score) do
   _G['drums_' .. part]()
 end
 end
 
 if (bass) then
   print('Rendering bass')
-pointer = 200
-for i, part in ipairs(bass_score) do
+pointer = 0
+for i, part in ipairs(b_score) do
   _G['bass_' .. part]()
 end
 end
 
 if (synthesizer) then
   print('Rendering synthesizer')
-pointer = 200
-for i, part in ipairs(synthesizer_score) do
+pointer = 0
+for i, part in ipairs(s_score) do
   _G['synth_' .. part]()
 end
 end
 
 if (guitar) then
   print('Rendering guitar')
-pointer = 200
-for i, part in ipairs(guitar_score) do
+pointer = 0
+for i, part in ipairs(g_score) do
   _G['guitar_' .. part]()
 end
 end

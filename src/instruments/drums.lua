@@ -108,10 +108,9 @@ function cymbalconduction (timeline, timelenght)
 end
 
 function cymbalconductionfast (timeline, timelenght)
-	for i=timeline,timeline+timelenght,100
+	for i=timeline,timeline+timelenght,25
 	do 
-		closedcymbal(i-50)
-		pedalcymbal(i)
+		closedcymbal(25)
 	end
 end
 
@@ -153,7 +152,7 @@ function virada (timeline, timelenght)
     hightom(i-50)
     mediumtom(i-25)
     mediumtom(i)
-    lowtom(i)
+    lowtom(i) 
 	end
 end
 
@@ -177,5 +176,13 @@ function viradacurta (timeline, timelenght)
      mediumtom(i-100)
      mediumtom(i-50)
      hightom(i-50)
+	end
+end
+
+function porradaria (timeline, timelenght)
+	for i=timeline,timeline+timelenght,50
+	do 	  
+ 	    bassdrum2(i-25)
+	    snare(i)
 	end
 end

@@ -24,7 +24,9 @@ sox -m bass_$1-temp.wav synth_$1-temp.wav drums_$1-temp.wav $1-temp.wav rate 480
 sox --norm $1-temp.wav $1-master-temp.wav rate 48000 treble 2 bass 1 reverb dither -s -a
 #sox -m guitar_$1.wav guitar_2_$1.wav guitar_merged_$1-temp.wav rate 48000 dither -s -a
 #sox -m guitar_merged_$1-temp.wav $1-master-temp.wav $1.wav pad 1 1 rate 48000 dither -s -a
-sox -m guitar_2_$1.wav $1-master-temp.wav $1.wav pad 1 1 rate 48000 dither -s -a
+sox -m guitar_2_$1.wav $1-master-temp.wav $1.wav rate 48000 dither -s -a
+sox $1.wav $1-master-temp.wav pad 1 1 rate 48000 dither -s -a 
+mv $1-master-temp.wav $1.wav
 rm *-temp.wav
 rm drums_* bass_* synth_* guitar_*
 lame -q0 -b256 $1.wav $1.mp3
