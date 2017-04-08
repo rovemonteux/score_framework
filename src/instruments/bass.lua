@@ -110,3 +110,15 @@ end
 function bass_1_9 (timeline, noteduration, notevelocity, position, channel)
 	note_fs3 (timeline, noteduration, notevelocity, position, channel)
 end
+
+function bass_2_0 (timeline, noteduration, notevelocity, position, channel)
+	note_d3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function bass_2_1 (timeline, noteduration, notevelocity, position, channel)
+	note_ds3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function bass_2_2 (timeline, noteduration, notevelocity, position, channel)
+	note_e3 (timeline, noteduration, notevelocity, position, channel)
+end
