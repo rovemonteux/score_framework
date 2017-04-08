@@ -107,6 +107,14 @@ function cymbalconduction (timeline, timelenght)
 	end
 end
 
+function cymbalconductionfast (timeline, timelenght)
+	for i=timeline,timeline+timelenght,100
+	do 
+		closedcymbal(i-50)
+		pedalcymbal(i)
+	end
+end
+
 function rideconduction (timeline, timelenght)
 	for i=timeline,timeline+timelenght,100
 	do 
@@ -114,13 +122,37 @@ function rideconduction (timeline, timelenght)
 	end
 end
 
+function rideconductionfast (timeline, timelenght)
+	for i=timeline,timeline+timelenght,100
+	do 
+		ride1(i-50)
+		ride1(i)
+	end
+end
+
+function drum_1_2 (timeline, timelenght)
+	for i=timeline,timeline+timelenght,100
+	do 
+		bassdrum1(i-50)
+		snare(i)
+	end
+end
+
+function drum_1_2_lento (timeline, timelenght)
+	for i=timeline,timeline+timelenght,200
+	do 
+		bassdrum1(i-200)
+		snare(i-100)
+	end
+end
+
 function virada (timeline, timelenght)
 	for i=timeline,timeline+timelenght,100
 	do 
-		hightom(i-100)
-    hightom(i-75)
-    mediumtom(i-50)
+		hightom(i-75)
+    hightom(i-50)
     mediumtom(i-25)
+    mediumtom(i)
     lowtom(i)
 	end
 end
@@ -133,5 +165,17 @@ function viradalenta (timeline, timelenght)
     mediumtom(i-50)
     mediumtom(i)
     lowtom(i)
+	end
+end
+
+function viradacurta (timeline, timelenght)
+	for i=timeline,timeline+timelenght,200
+	do 
+		lowtom(i-200)
+     mediumtom(i-200)
+     lowtom(i-100)
+     mediumtom(i-100)
+     mediumtom(i-50)
+     hightom(i-50)
 	end
 end

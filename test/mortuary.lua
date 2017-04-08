@@ -35,12 +35,23 @@ pointer = 0
 drum = true
 bass = true 
 synthesizer = true
-guitar = true
+guitar = false
 
 -- verses
 function synth_1 ()
 	note_e2(pointer,high_d(),high_v(),4,1)
-	pointer = pointer + 900
+	note_e3(pointer,high_d(),high_v(),4,1)
+	pointer = pointer + 800
+end
+
+function synth_2 ()
+	note_e2(pointer,high_d(),high_v(),4,1)
+	note_e3(pointer,high_d(),high_v(),4,1)
+	note_e2(pointer+400,medium_d(),medium_v(),4,1)
+	note_e3(pointer+400,medium_d(),medium_v(),4,1)
+	note_c2(pointer+700,low_d(),medium_v(),4,1)
+	note_c3(pointer+700,low_d(),medium_v(),4,1)
+	pointer = pointer + 800
 end
 
 function bass_1 ()
@@ -52,9 +63,9 @@ function bass_1 ()
 	bass_1_2(pointer+500,high_d(),high_v(),3,0)
 	 	bass_1_3(pointer+600,high_d(),high_v(),3,0)
 	bass_1_3(pointer+700,high_d(),high_v(),3,0)
-	 	bass_1_2(pointer+750,high_d(),high_v(),3,0)
-	 	 	bass_1_1(pointer+800,high_d(),high_v(),3,0)
-	pointer = pointer + 900
+	 	bass_1_2(pointer+725,high_d(),high_v(),3,0)
+	 	 	bass_1_1(pointer+750,high_d(),high_v(),3,0)
+	pointer = pointer + 800
 end
 
 function guitar_1 ()
@@ -66,19 +77,36 @@ function guitar_1 ()
 	guitar_1_2(pointer+500,high_d(),high_v(),5,2)
 	 	guitar_1_3(pointer+600,high_d(),high_v(),5,2)
 	guitar_1_3(pointer+700,high_d(),high_v(),5,2)
-	 	guitar_1_2(pointer+750,high_d(),high_v(),5,2)
-	 	 	guitar_1_1(pointer+800,high_d(),high_v(),5,2)
-	pointer = pointer + 900
+	 	guitar_1_2(pointer+725,high_d(),high_v(),5,2)
+	 	 	guitar_1_1(pointer+750,high_d(),high_v(),5,2)
+	pointer = pointer + 800
 end
 
 function drums_1 ()
 	bassdrum1(pointer)
 	attack1(pointer)
-	pointer = pointer + 900
+	pointer = pointer + 800
+end
+
+function drums_2 ()
+	attack2(pointer)
+	attack1(pointer+100)
+	rideconductionfast(pointer,700)
+	drum_1_2_lento(pointer,700)
+	pointer = pointer + 800
+end
+
+function drums_3 ()
+	attack2(pointer)
+	attack1(pointer+100)
+	rideconductionfast(pointer,700)
+	drum_1_2_lento(pointer,700)
+	viradacurta(pointer+600,200)
+	pointer = pointer + 800
 end
 
 -- tempo and instruments
-my_score = { 94, -- tempo
+my_score = { 52, -- tempo
 { -- drums, position 2, channel 9
 {'patch_change', 0, 9, 114},
 },
@@ -94,10 +122,10 @@ my_score = { 94, -- tempo
 }
 
 -- song structure
-drums_score = { 1, 1 }
-bass_score = { 1, 1 }
-synthesizer_score = { 1, 1 }
-guitar_score = { 1, 1 }
+drums_score = { 1, 1, 2, 3, 2, 3 }
+bass_score = { 1, 1, 1, 1, 1, 1 }
+synthesizer_score = { 1, 1, 2, 2, 2, 2 }
+guitar_score = { 1, 1, 1, 1, 1, 1 }
 
 -- write MIDI file
 render()

@@ -18,17 +18,17 @@
 
 function low_v ()
 	velocity_randomseed()
-	return math.random(30, 50)
+	return math.random(10, 80)
 end
 
 function medium_v ()
 	velocity_randomseed()
-	return math.random(51, 80)
+	return math.random(80, 112)
 end
 
 function high_v ()
 	velocity_randomseed()
-	return math.random(81, 127)
+	return math.random(112, 127)
 end
 
 function velocity_randomseed ()
