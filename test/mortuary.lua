@@ -27,6 +27,7 @@ require 'data/duration'
 require 'data/velocity'
 require 'data/notes'
 require 'io/midiio'
+require 'io/voiceio'
 require 'render'
 
 pointer = 0
@@ -36,8 +37,22 @@ drum = true
 bass = true 
 synthesizer = true
 guitar = false
+voice = true
 
 -- verses
+
+function voice_0 ()
+	pointer = pointer + 800
+end
+
+function voice_1 ()
+	pointer = pointer + 200
+end
+
+function voice_2 ()
+
+end
+
 function synth_1 ()
 	note_e2(pointer,high_d(),high_v(),4,1)
 	note_e3(pointer,high_d(),high_v(),4,1)

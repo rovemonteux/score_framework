@@ -29,11 +29,11 @@ function GET(url)
         return #buf
     end)
     c:setopt(curl.OPT_PROGRESSFUNCTION, function(param, dltotal, dlnow)
-        print('%', url, dltotal, dlnow) -- do your fancy reporting here
+        -- print('%', url, dltotal, dlnow) 
     end)
     c:setopt(curl.OPT_NOPROGRESS, false) -- use this to activate progress
     assert(c:perform())
-	tprint(t)
+	-- tprint(t)
 	return table.concat(t) -- return the whole data as a string
 end
 
