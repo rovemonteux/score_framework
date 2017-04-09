@@ -63,6 +63,10 @@ function ride1 (timeline)
 	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_ride1, medium_v()})
 end
 
+function ride1_loud (timeline)
+	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_ride1, high_v()})
+end
+
 function ride2 (timeline)
 	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_ride2, medium_v()})
 end
@@ -125,22 +129,27 @@ function rideconductionfast (timeline, timelenght)
 	for i=timeline,timeline+timelenght,100
 	do 
 		ride1(i-50)
-		ride1(i)
+		ride1_loud(i)
 	end
 end
 
 function drum_1_2 (timeline, timelenght)
 	for i=timeline,timeline+timelenght,100
 	do 
-		bassdrum1(i-50)
-		snare(i)
+	snare(pointer)
+	bassdrum1(pointer)
+	snare(pointer+15)
+	bassdrum1(pointer+30)
+	snare(pointer+45)
+	bassdrum1(pointer+60)
+	snare(pointer+75)
 	end
 end
 
 function drum_1_2_lento (timeline, timelenght)
 	for i=timeline,timeline+timelenght,200
 	do 
-		bassdrum1(i-200)
+		bassdrum2(i-200)
 		snare(i-100)
 	end
 end
@@ -185,4 +194,9 @@ function porradaria (timeline, timelenght)
  	    bassdrum2(i-25)
 	    snare(i)
 	end
+end
+
+function intro (timeline) 
+  opencymbal(timeline)
+  opencymbal(timeline+50)
 end

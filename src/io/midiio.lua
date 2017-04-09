@@ -22,21 +22,30 @@ require 'debug/dumper'
 
 function write_midi (filename, score)
   drums_score = clone(score) -- position 2
+  drums_score[6] = nil
   drums_score[5] = nil
   drums_score[4] = nil
   drums_score[3] = nil
   bass_score = clone(score) -- position 3
+  table.remove(bass_score,6)
   table.remove(bass_score,5)
   table.remove(bass_score,4)
   table.remove(bass_score,2)
   synth_score = clone(score) -- position 4
+  table.remove(synth_score,6)
   table.remove(synth_score,5)
   table.remove(synth_score,3)
   table.remove(synth_score,2)
   guitar_score = clone(score) -- position 5
+  table.remove(guitar_score,6)
   table.remove(guitar_score,4)
   table.remove(guitar_score,3)
   table.remove(guitar_score,2)
+  piano_score = clone(score) -- position 6
+  table.remove(piano_score,5)
+  table.remove(piano_score,4)
+  table.remove(piano_score,3)
+  table.remove(piano_score,2)
   
   file = io.open("score_debug.txt", "w")
   file:write("Drums:\n")
@@ -47,12 +56,15 @@ function write_midi (filename, score)
   file:write(DataDumper(synth_score))
   file:write("\n\nGuitar:\n")
   file:write(DataDumper(guitar_score))
+  file:write("\n\nPiano:\n")
+  file:write(DataDumper(guitar_score))
   file:close()
   
   save('drums_',filename,drums_score)
   save('bass_',filename,bass_score)
   save('synth_',filename,synth_score)
   save('guitar_',filename,guitar_score)
+  save('piano_',filename,piano_score)
 end
 
 function save(prefix,filename,score)

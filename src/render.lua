@@ -18,6 +18,31 @@
 
 function render()
 
+function drums_0 ()
+  bassdrum1(pointer)
+  pointer = pointer + 400
+end
+
+function bass_0 ()
+  bass_0_0(pointer,medium_d(),medium_v(),3,0)
+  pointer = pointer + 400
+end
+
+function synth_0 ()
+  note_e2(pointer,medium_d(),medium_v(),4,1)
+  pointer = pointer + 400
+end
+
+function piano_0 ()
+  piano_f1(pointer,medium_d(),medium_v(),6,3)
+  pointer = pointer + 400
+end
+
+function guitar_0 ()
+  guitar_0_0(pointer,medium_d(),medium_v(),5,2)
+  pointer = pointer + 400
+end
+
 if (drum) then
   print('Rendering drum')
 pointer = 0
@@ -47,6 +72,14 @@ if (guitar) then
 pointer = 0
 for i, part in ipairs(g_score) do
   _G['guitar_' .. part]()
+end
+end
+
+if (piano) then
+  print('Rendering piano')
+pointer = 0
+for i, part in ipairs(p_score) do
+  _G['piano_' .. part]()
 end
 end
 
