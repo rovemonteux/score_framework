@@ -61,10 +61,10 @@ function urlencode(str)
 end
 
 function speak (text,name)
-urladdress = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=" .. urlencode(text) .. "&tl=en"
+urladdress = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=" .. urlencode(text) .. "&tl=en_GB"
 print("Retrieving " .. urladdress)
 local s = GET(urladdress)
-local file, err = io.open (name .. '.wav',"w")
+local file, err = io.open (name .. '.mp3',"w")
 if file==nil then
     print("Couldn't open file: "..err)
 else
@@ -73,4 +73,4 @@ else
 end
 end
 
-speak ("In a mortuary...", "test")
+speak ("so... finally dead... freedom... in a mortuary...", "test")
