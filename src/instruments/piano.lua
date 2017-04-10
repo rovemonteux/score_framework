@@ -121,6 +121,23 @@ function piano_chord_c3 (timeline, noteduration, notevelocity, position, channel
 	note_c4 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function piano_e3 (timeline, noteduration, notevelocity, position, channel)
+	note_e3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_e3 (timeline, noteduration, notevelocity, position, channel)
+	note_e3 (timeline, noteduration, notevelocity, position, channel)
+	note_e4 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function piano_c4 (timeline, noteduration, notevelocity, position, channel)
 	note_c4 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_e4 (timeline, noteduration, notevelocity, position, channel)
+	note_e4 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_f4 (timeline, noteduration, notevelocity, position, channel)
+	note_f4 (timeline, noteduration, notevelocity, position, channel)
 end

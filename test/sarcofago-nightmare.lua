@@ -22,11 +22,13 @@ package.path = package.path .. ";../src/?.lua"
 require 'instruments/drums'
 require 'instruments/bass'
 require 'instruments/guitar'
+require 'instruments/piano'
 require 'instruments/patches'
 require 'data/duration'
 require 'data/velocity'
 require 'data/notes'
 require 'io/midiio'
+require 'io/voiceio'
 require 'render'
 
 pointer = 0
@@ -35,7 +37,9 @@ pointer = 0
 drum = true
 bass = true 
 synthesizer = true
-guitar = true
+guitar = false
+voice = false
+piano = true
 
 -- verses
 function drums_0 ()
@@ -50,6 +54,12 @@ function synth_1 ()
 	note_f3(pointer,high_d(),high_v(),4,1)
 	note_e2(pointer+200,high_d(),high_v(),4,1)
 	note_e3(pointer+200,high_d(),high_v(),4,1)	
+	pointer = pointer + 400
+end
+
+function piano_1 ()
+	piano_fullchord_c2(pointer,high_d(),high_v(),6,3)
+	piano_fullchord_b1(pointer+200,high_d(),high_v(),6,3)
 	pointer = pointer + 400
 end
 
@@ -84,6 +94,17 @@ function drums_1 ()
 	snare(pointer+350)
 	snare(pointer+375)
 	pointer = pointer + 400
+end
+
+function piano_2 ()
+	piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
+	piano_f4(pointer+200,high_d(),high_v(),6,3)
+	piano_e4(pointer+300,high_d(),high_v(),6,3)
+	piano_fullchord_e1(pointer+400,high_d(),high_v(),6,3)
+	piano_chord_e3(pointer+700,high_d(),high_v(),6,3)
+	piano_fullchord_e1(pointer+800,high_d(),high_v(),6,3)
+	piano_chord_e3(pointer+1100,high_d(),high_v(),6,3)
+	pointer = pointer + 1200
 end
 
 function bass_2 ()
@@ -333,13 +354,17 @@ my_score = { 92, -- tempo
 { -- guitar, position 5, channel 2
 {'patch_change', 0, 2, 32}, 
 },
+{ -- piano, position 6, channel 3
+{'patch_change', 0, 3, 0}, 
+},
 }
 
 -- song structure
-d_score = {1,21,2,2,1,2,2,2,1,2,2,21,1,3,4,31,4,31,4,3,4,21,21,2,1,2,2,2,1,21,21,21,1}
-b_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
-s_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
-g_score = {1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+d_score = {0,1,21,2,2,1,2,2,2,1,2,2,21,1,3,4,31,4,31,4,3,4,21,21,2,1,2,2,2,1,21,21,21,1}
+b_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+s_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+g_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+p_score = {0,1,2,1,2,1,2,1}
 
 -- write MIDI file
 render()

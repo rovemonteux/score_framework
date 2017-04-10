@@ -22,11 +22,13 @@ package.path = package.path .. ";../src/?.lua"
 require 'instruments/drums'
 require 'instruments/bass'
 require 'instruments/guitar'
+require 'instruments/piano'
 require 'instruments/patches'
 require 'data/duration'
 require 'data/velocity'
 require 'data/notes'
 require 'io/midiio'
+require 'io/voiceio'
 require 'render'
 
 pointer = 0
@@ -35,11 +37,18 @@ pointer = 0
 drum = true
 bass = true 
 synthesizer = true
-guitar = true
+guitar = false
+voice = false
+piano = true
 
 -- verses
 function synth_1 ()
 	note_f2(pointer,high_d(),high_v(),4,1)
+	pointer = pointer + 400
+end
+
+function piano_1 ()
+	piano_fullchord_c2(pointer,high_d(),high_v(),6,3)
 	pointer = pointer + 400
 end
 
@@ -59,7 +68,7 @@ function drums_1 ()
 end
 
 -- tempo and instruments
-my_score = { 94, -- tempo
+my_score = { 58, -- tempo
 { -- drums, position 2, channel 9
 {'patch_change', 0, 9, 0},
 },
@@ -72,13 +81,17 @@ my_score = { 94, -- tempo
 { -- guitar, position 5, channel 2
 {'patch_change', 0, 2, 32}, 
 },
+{ -- piano, position 6, channel 3
+{'patch_change', 0, 3, 0}, 
+},
 }
 
 -- song structure
-d_score = { 1 }
-b_score = { 1 }
-s_score = { 1 }
-g_score = { 1 }
+d_score = { 0, 1 }
+b_score = { 0, 1 }
+s_score = { 0, 1 }
+g_score = { 0, 1 }
+p_score = { 0, 1 }
 
 -- write MIDI file
 render()
