@@ -43,6 +43,10 @@ function guitar_0 ()
   pointer = pointer + 400
 end
 
+function voice_0 ()
+	pointer = pointer + 400
+end
+
 if (drum) then
   print('Rendering drum')
 pointer = 0
@@ -80,6 +84,14 @@ if (piano) then
 pointer = 0
 for i, part in ipairs(p_score) do
   _G['piano_' .. part]()
+end
+end
+
+if (voice) then
+  print('Rendering voice')
+pointer = 0
+for i, part in ipairs(p_score) do
+  _G['voice_' .. part]()
 end
 end
 

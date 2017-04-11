@@ -31,17 +31,23 @@ require 'io/midiio'
 require 'io/voiceio'
 require 'render'
 
+score_name = "template"
 pointer = 0
 
 -- instrument output
 drum = true
 bass = true 
 synthesizer = true
-guitar = false
-voice = false
+guitar = true 
+voice = true 
 piano = true
 
 -- verses
+function voice_1 ()
+	speak("hello...","voice_1")
+	pointer = pointer + 400
+end
+
 function synth_1 ()
 	note_f2(pointer,high_d(),high_v(),4,1)
 	pointer = pointer + 400
@@ -92,7 +98,8 @@ b_score = { 0, 1 }
 s_score = { 0, 1 }
 g_score = { 0, 1 }
 p_score = { 0, 1 }
+v_score = { 0, 1 }
 
 -- write MIDI file
 render()
-write_midi('template.mid',  my_score)
+write_midi()

@@ -1,5 +1,8 @@
 #!/bin/sh
 cp *.sf2 /usr/share/sounds/sf2/
+apt-get install timidity
+apt-get install fluid-soundfont-gm
+apt-get install fluid-soundfont-gs
 cp rove.cfg /etc/timidity/
 cp timidity.cfg /etc/timidity/
 apt-get install normalize-audio

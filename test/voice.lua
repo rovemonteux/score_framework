@@ -70,7 +70,17 @@ if file==nil then
 else
     file:write(s)
     file:close()
+    voice_process(name)
 end
 end
 
-speak ("so... finally dead... freedom... in a mortuary...", "test")
+function voice_process (name)
+	os.execute("mpg123 -w ".. name ..".wav ".. name ..".mp3")
+	os.execute("sox -v 0.0005 ".. name ..".wav -b 32 ".. name .. "-processed.wav contrast 60 tempo -m 0.18 pitch -910 echos 0.8 0.7 100 0.25 200 0.25 300 0.3 overdrive 65 50 reverb highpass 10 rate 48000 dither -s -a")
+end
+
+speak("so...","voice_1")
+speak("finally dead...","voice_2")
+speak("freedom...","voice_3")
+speak("in a mortuary...","voice_4")
+

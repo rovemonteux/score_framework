@@ -45,7 +45,7 @@ function tprint (tbl, indent)
       print(formatting)
       tprint(v, indent+1)
     else
-      print(formatting .. v)
+	print(formatting .. v)
     end
   end
 end
@@ -60,15 +60,30 @@ function urlencode(str)
    return str    
 end
 
+function file_exists(name)
+   local f=io.open(name,"r")
+   if f~=nil then io.close(f) return true else return false end
+end
+
 function speak (text,name)
-urladdress = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=" .. urlencode(text) .. "&tl=en"
+if not file_exists(name .. '.mp3') then
+print("Rendering "..name..".mp3")
+urladdress = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=" .. urlencode(text) .. "&tl=en_GB"
 print("Retrieving " .. urladdress)
 local s = GET(urladdress)
-local file, err = io.open (name .. '.wav',"w")
+local file, err = io.open (name .. '.mp3',"w")
 if file==nil then
     print("Couldn't open file: "..err)
 else
     file:write(s)
     file:close()
+    voice_process(name)
 end
 end
+end
+
+function voice_process (name)
+        os.execute("mpg123 -w ".. name ..".wav ".. name ..".mp3")
+        os.execute("sox -v 0.0005 ".. name ..".wav -b 32 ".. name .. "-processed.wav contrast 60 tempo -m 0.18 pitch -910 echos 0.8 0.7 100 0.25 200 0.25 300 0.3 overdrive 65 50 reverb highpass 10 rate 48000 dither -s -a")
+end
+

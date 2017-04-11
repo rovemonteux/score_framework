@@ -31,6 +31,7 @@ require 'io/midiio'
 require 'io/voiceio'
 require 'render'
 
+score_name = "nightmare"
 pointer = 0
 
 -- instrument output
@@ -38,14 +39,13 @@ drum = true
 bass = true 
 synthesizer = true
 guitar = false
-voice = false
+voice = true 
 piano = true
 
 -- verses
-function drums_0 ()
-    closedcymbal(pointer)
-    closedcymbal (pointer+100)
-    pointer = pointer + 200
+function voice_1 ()
+	speak("nightmare...","voice_1")
+	pointer = pointer + 400
 end
 
 function synth_1 ()

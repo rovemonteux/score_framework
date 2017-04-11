@@ -31,14 +31,16 @@ require 'io/midiio'
 require 'io/voiceio'
 require 'render'
 
+score_name = "mortuary" 
+
 pointer = 0
 
 -- instrument output
 drum = true
 bass = true 
 synthesizer = true
-guitar = false
-voice = false
+guitar = false 
+voice = true 
 piano = true
 
 -- verses
@@ -48,11 +50,24 @@ function voice_0 ()
 end
 
 function voice_1 ()
-	pointer = pointer + 200
+	speak("so...","voice_1")
+	pointer = pointer + 800 
 end
 
-function voice_2 ()
 
+function voice_2 ()
+	speak("finally dead...","voice_2")
+	pointer = pointer+800
+end
+
+function voice_3 ()
+	speak("freedom...","voice_3")
+	pointer = pointer + 800
+end
+
+function voice_4 ()
+	speak("in a mortuary...","voice_4")
+	pointer = pointer + 800
 end
 
 function piano_1 ()
@@ -287,7 +302,8 @@ b_score = { 0, 1, 1, 1, 4, 4, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3,
 s_score = { 0, 1, 2, 2, 3, 3, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 1, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 2, 2, 2, 3, 1 }
 g_score = { 0, 1, 1, 1, 1, 1 }
 p_score = { 0, 1, 1, 1, 2, 2, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2 }
+v_score = { 0, 1, 2, 3 }
 
 -- write MIDI file
 render()
-write_midi('mortuary.mid',  my_score)
+write_midi()
