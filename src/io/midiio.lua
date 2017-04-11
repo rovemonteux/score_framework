@@ -105,7 +105,19 @@ mix = mix .. score_name .. "-temp.wav rate 48000 dither -s -a"
 print("Mix down: "..mix)
 os.execute(mix)
 -- TODO: calculate this based on the score tempo.
+-- base is 16
+-- first click pointer: 400ms
+-- tempo 58: 1032 ms
+-- tempo 59: 1016 ms
+-- tempo 60: 1000 ms
+-- tempo 58: 400 pointer, 1032 ms, 3 seconds trim - factor 344 (1032/3) - trim factor 3
+-- tempo 92: 217 (652/3) - trim_factor 2
 local trim_factor = 3
+print("tempo: "..my_score[1])
+if (tonumber(my_score[1]) > 66) then
+trim_factor = 2
+end 
+print("Trim factor: "..trim_factor)
 os.execute("sox "..score_name.."-temp.wav "..score_name.."-trim-temp.wav trim "..trim_factor.." rate 48000 dither -s -a")
 --
 os.execute("sox --norm "..score_name.."-trim-temp.wav "..score_name..".wav rate 48000 treble 2 bass -1 equalizer 600 600 2 reverb dither -s -a")

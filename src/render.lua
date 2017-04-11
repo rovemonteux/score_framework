@@ -90,7 +90,7 @@ end
 if (voice) then
   print('Rendering voice')
 pointer = 0
-for i, part in ipairs(p_score) do
+for i, part in ipairs(v_score) do
   _G['voice_' .. part]()
 end
 end
