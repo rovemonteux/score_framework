@@ -32,5 +32,5 @@ function high_v ()
 end
 
 function velocity_randomseed ()
-	math.randomseed(os.time())
+
 end

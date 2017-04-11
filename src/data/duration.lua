@@ -32,5 +32,5 @@ function high_d ()
 end
 
 function duration_randomseed ()
-	math.randomseed(os.time())
+
 end

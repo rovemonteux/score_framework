@@ -17,7 +17,7 @@
 ---------------------------------------------------------------------------------
 
 function render()
-
+math.randomseed(os.time())
 function drums_0 ()
   bassdrum1(pointer)
   pointer = pointer + 400
