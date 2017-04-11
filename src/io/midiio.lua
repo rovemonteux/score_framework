@@ -76,7 +76,7 @@ os.execute("timidity --output-24bit bass_"..score_name..".mid -OwS -k0 -a -o bas
 os.execute("timidity --output-24bit synth_"..score_name..".mid -OwS -k0 -a -o synth_"..score_name..".wav")
 os.execute("timidity --output-24bit guitar_"..score_name..".mid -OwS -k0 -a -o guitar_"..score_name..".wav")
 os.execute("timidity --output-24bit piano_"..score_name..".mid -OwS -k0 -a -o piano_"..score_name..".wav")
-os.execute("sox -v 0.025 drums_"..score_name..".wav -b 24 drums_"..score_name.."-temp.wav equalizer 800 080 3 contrast 20 overdrive 25 100 reverb rate 48000 dither -s -a")
+os.execute("sox -v 0.02 drums_"..score_name..".wav -b 24 drums_"..score_name.."-temp.wav equalizer 800 080 3 contrast 20 overdrive 25 100 reverb rate 48000 dither -s -a")
 os.execute("sox bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav overdrive 4 80 rate 48000 dither -s -a")
 os.execute("sox -v 0.25 bass_"..score_name.."-temp.wav -b 24 bass_"..score_name..".wav rate 48000 dither -s -a")
 os.execute("sox bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav bass 14 rate 48000 dither -s -a")
