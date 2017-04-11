@@ -98,8 +98,8 @@ end
 
 function piano_2 ()
 	piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
-	piano_f4(pointer+200,high_d(),high_v(),6,3)
-	piano_e4(pointer+300,high_d(),high_v(),6,3)
+	piano_f2(pointer+200,high_d(),high_v(),6,3)
+	piano_e2(pointer+300,high_d(),high_v(),6,3)
 	piano_fullchord_e1(pointer+400,high_d(),high_v(),6,3)
 	piano_chord_e3(pointer+700,high_d(),high_v(),6,3)
 	piano_fullchord_e1(pointer+800,high_d(),high_v(),6,3)
