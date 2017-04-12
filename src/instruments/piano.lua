@@ -66,12 +66,28 @@ function piano_fullchord_fs1 (timeline, noteduration, notevelocity, position, ch
 	note_fs3 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function piano_chord_fs1 (timeline, noteduration, notevelocity, position, channel)
+        note_fs1 (timeline, noteduration, notevelocity, position, channel)
+        note_fs2 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function piano_fs1 (timeline, noteduration, notevelocity, position, channel)
 	note_f1 (timeline, noteduration, notevelocity, position, channel)
 end
 
 function piano_gs1 (timeline, noteduration, notevelocity, position, channel)
 	note_gs1 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_gs1 (timeline, noteduration, notevelocity, position, channel)
+        note_gs1 (timeline, noteduration, notevelocity, position, channel)
+        note_gs2 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_fullchord_gs1 (timeline, noteduration, notevelocity, position, channel)
+        note_gs1 (timeline, noteduration, notevelocity, position, channel)
+        note_gs2 (timeline, noteduration, notevelocity, position, channel)
+	note_gs3 (timeline, noteduration, notevelocity, position, channel)
 end
 
 function piano_fullchord_e2 (timeline, noteduration, notevelocity, position, channel)
@@ -83,6 +99,25 @@ end
 function piano_chord_e2 (timeline, noteduration, notevelocity, position, channel)
 	note_e2 (timeline, noteduration, notevelocity, position, channel)
 	note_e3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_e2 (timeline, noteduration, notevelocity, position, channel)
+        note_e2 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_f2 (timeline, noteduration, notevelocity, position, channel)
+        note_f2 (timeline, noteduration, notevelocity, position, channel)
+        note_f3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_fullchord_f2 (timeline, noteduration, notevelocity, position, channel)
+        note_f2 (timeline, noteduration, notevelocity, position, channel)
+        note_f3 (timeline, noteduration, notevelocity, position, channel)
+        note_f4 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_f2 (timeline, noteduration, notevelocity, position, channel)
+        note_f2 (timeline, noteduration, notevelocity, position, channel)
 end
 
 function piano_fullchord_c2 (timeline, noteduration, notevelocity, position, channel)

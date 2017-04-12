@@ -71,6 +71,10 @@ function ride2 (timeline)
 	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_ride2, medium_v()})
 end
 
+function ride2_loud (timeline)
+        table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_ride2, high_v()})
+end
+
 function attack1 (timeline)
 	table.insert(my_score[2], {'note', timeline, high_d(), 9, instrument_attack1, high_v()})
 end
