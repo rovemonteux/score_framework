@@ -160,14 +160,59 @@ function note_d4 (timeline, noteduration, notevelocity, position, channel)
 	table.insert(my_score[position], {'note', timeline, noteduration, channel, 62, notevelocity})
 end
 
-function note_e4 (timeline, noteduration, notevelocity, position, channel)
+function note_ds4 (timeline, noteduration, notevelocity, position, channel)
 	table.insert(my_score[position], {'note', timeline, noteduration, channel, 63, notevelocity})
 end
 
-function note_f4 (timeline, noteduration, notevelocity, position, channel)
+function note_e4 (timeline, noteduration, notevelocity, position, channel)
 	table.insert(my_score[position], {'note', timeline, noteduration, channel, 64, notevelocity})
 end
 
-function note_fs4 (timeline, noteduration, notevelocity, position, channel)
+function note_f4 (timeline, noteduration, notevelocity, position, channel)
 	table.insert(my_score[position], {'note', timeline, noteduration, channel, 65, notevelocity})
 end
+
+function note_fs4 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 66, notevelocity})
+end
+
+function note_g4 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 67, notevelocity})
+end
+
+function note_gs4 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 68, notevelocity})
+end
+
+function note_a4 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 69, notevelocity})
+end
+
+function note_as4 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 70, notevelocity})
+end
+
+function note_b4 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 71, notevelocity})
+end
+
+function note_c5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 72, notevelocity})
+end
+
+function note_e5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 76, notevelocity})
+end
+
+function note_gs5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 80, notevelocity})
+end
+
+function note_b5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 83, notevelocity})
+end
+
+function note_c6 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 84, notevelocity})
+end
+

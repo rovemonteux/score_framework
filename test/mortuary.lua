@@ -72,16 +72,17 @@ end
 
 function piano_1 ()
   piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
+  piano_chord_e4(pointer,high_d(),high_v(),6,3)
   piano_fullchord_b1(pointer+100,high_d(),high_v(),6,3)
   piano_fullchord_as1(pointer+200,high_d(),high_v(),6,3)
   piano_fullchord_fs1(pointer+300,high_d(),high_v(),6,3)
   piano_chord_e2(pointer+400,high_d(),high_v(),6,3)
   piano_fullchord_b1(pointer+500,high_d(),high_v(),6,3)
   piano_fullchord_c2(pointer+600,high_d(),high_v(),6,3)
-  piano_c4(pointer+700,high_d(),high_v(),6,3)
-  piano_b3(pointer+725,high_d(),high_v(),6,3)
-  piano_chord_as1(pointer+750,high_d(),high_v(),6,3)
-	pointer = pointer + 800
+  piano_fullchord_c3(pointer+700,low_d(),high_v(),6,3)
+  piano_fullchord_b2(pointer+725,low_d(),high_v(),6,3)
+  piano_fullchord_as1(pointer+750,high_d(),high_v(),6,3)
+  pointer = pointer + 800
 end
 
 function piano_2 ()
@@ -97,6 +98,14 @@ function piano_3 ()
 	piano_f1(pointer+125,high_d(),high_v(),6,3)
 	piano_gs1(pointer+150,high_d(),high_v(),6,3)
 	piano_fullchord_f1(pointer+175,high_d(),high_v(),6,3)
+	pointer = pointer + 200
+end
+
+function piano_4 ()
+ 	piano_fullchord_e1(pointer,medium_d(),high_v(),6,3)
+	piano_chord_e4(pointer,medium_d(),high_v(),6,3)
+	piano_fullchord_gs1(pointer+100,medium_d(),high_v(),6,3)
+        piano_chord_gs4(pointer+100,medium_d(),high_v(),6,3)
 	pointer = pointer + 200
 end
 
@@ -215,20 +224,27 @@ function drums_8 ()
 	cymbalconductionfast(pointer,100)
 	attack2(pointer)
 	splash(pointer)
-	drum_1_2(pointer,78)
+	--drum_1_2(pointer,78)
+	bassdrum1(pointer)	
+	snare(pointer+15)
+	bassdrum2(pointer+30)
+	snare(pointer+45)
+	bassdrum1(pointer+60)
+	snare(pointer+75)
 	attack1(pointer+100)
 	attack2(pointer+100)
-	snare(pointer+100)
 	bassdrum2(pointer+100)
+	snare(pointer+100)
 	attack1(pointer+125)
 	attack2(pointer+125)
 	snare(pointer+125)
-	bassdrum2(pointer+125)
+	bassdrum1(pointer+125)
 	attack1(pointer+150)
 	attack2(pointer+150)
 	snare(pointer+150)
-	bassdrum2(pointer+150)
+	bassdrum1(pointer+150)
 	snare(pointer+175)
+	bassdrum2(pointer+175)
 	pointer = pointer + 200
 end
 
@@ -301,7 +317,7 @@ d_score = { 0, 1, 2, 3, 8, 8, 2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7,
 b_score = { 0, 1, 1, 1, 4, 4, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 5, 5, 1, 1, 1, 1, 1, 1, 2, 1, 4, 4, 5, 1, 1, 1, 1, 2, 5 }
 s_score = { 0, 1, 2, 2, 3, 3, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 1, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 2, 2, 2, 3, 1 }
 g_score = { 0, 1, 1, 1, 1, 1 }
-p_score = { 0, 1, 1, 1, 2, 2, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2 }
+p_score = { 0, 1, 1, 1, 4, 4, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 4, 4, 2, 1, 1, 1, 1, 1, 2 }
 v_score = { 0, 1, 2, 3 }
 
 -- write MIDI file
