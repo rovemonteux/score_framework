@@ -311,6 +311,11 @@ function piano_f4 (timeline, noteduration, notevelocity, position, channel)
 	note_f4 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function piano_chord_fs4 (timeline, noteduration, notevelocity, position, channel)
+        note_fs4 (timeline, noteduration, notevelocity, position, channel)
+	note_fs5 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function piano_gs4 (timeline, noteduration, notevelocity, position, channel)
         note_gs4 (timeline, noteduration, notevelocity, position, channel)
 end
