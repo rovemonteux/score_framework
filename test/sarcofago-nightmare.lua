@@ -35,7 +35,7 @@ score_name = "nightmare"
 pointer = 0
 
 -- instrument output
-drum = true
+drum = false 
 bass = true 
 synthesizer = true
 guitar = false
