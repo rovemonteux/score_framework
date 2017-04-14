@@ -109,11 +109,11 @@ function piano_2 ()
 	pointer = pointer + 1200
 end
 
-function piano_3
+function piano_3 ()
 	pointer = pointer + 800
 end
 
-function piano_4
+function piano_4 ()
 	pointer = pointer + 800
 end
 
