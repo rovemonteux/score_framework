@@ -109,6 +109,14 @@ function piano_2 ()
 	pointer = pointer + 1200
 end
 
+function piano_3
+	pointer = pointer + 800
+end
+
+function piano_4
+	pointer = pointer + 800
+end
+
 function bass_2 ()
   bass_0_0(pointer,high_d(),high_v(),3,0)
   bass_0_0(pointer+100,medium_d(),high_v(),3,0)
@@ -366,7 +374,7 @@ d_score = {0,1,21,2,2,1,2,2,2,1,2,2,21,1,3,4,31,4,31,4,3,4,21,21,2,1,2,2,2,1,21,
 b_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 s_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 g_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
-p_score = {0,1,2,1,2,1,2,1}
+p_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 v_score = {0,1}
 
 -- write MIDI file
