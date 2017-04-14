@@ -36,7 +36,7 @@ score_name = "mortuary"
 pointer = 0
 
 -- instrument output
-drum = true
+drum = false
 bass = true 
 synthesizer = true
 guitar = false 
@@ -222,36 +222,31 @@ end
 
 function drums_7 ()
 	attack1(pointer)
-	attack2(pointer)
 	cymbalconductionfast(pointer,200)
-	porradaria(pointer,150)
+	bassdrum1(pointer)
+	snare(pointer+25)
+	bassdrum1(pointer+50)
+	snare(pointer+75)
+	bassdrum1(pointer+100)
+	snare(pointer+125)
 	pointer = pointer + 200
 end
 
 function drums_8 ()
 	cymbalconductionfast(pointer,100)
 	attack2(pointer)
-	splash(pointer)
 	--drum_1_2(pointer,78)
-	--bassdrum1(pointer)	
-	--snare(pointer+15)
 	bassdrum2(pointer+30)
 	snare(pointer+45)
 	bassdrum1(pointer+60)
 	snare(pointer+75)
 	attack1(pointer+100)
-	attack2(pointer+100)
 	bassdrum2(pointer+100)
-	snare(pointer+100)
-	attack1(pointer+125)
 	attack2(pointer+125)
-	snare(pointer+125)
 	bassdrum1(pointer+125)
 	attack1(pointer+150)
-	attack2(pointer+150)
-	snare(pointer+150)
 	bassdrum1(pointer+150)
-	--snare(pointer+175)
+	attack2(pointer+150)
 	bassdrum2(pointer+175)
 	pointer = pointer + 200
 end
@@ -296,6 +291,12 @@ function drums_9()
   pointer = pointer + 200
 end
 
+function drums_10()
+  attack1(pointer)
+  attack2(pointer)
+  pointer = pointer + 200
+end
+
 function bass_5()
   bass_1_1(pointer,high_d(),high_v(),3,0)
   pointer = pointer+200
@@ -321,7 +322,7 @@ my_score = { 58, -- tempo
 }
 
 -- song structure
-d_score = { 0, 1, 2, 3, 8, 8, 2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7, 8, 8, 9, 9, 1, 1, 2, 3, 2, 3, 4, 1, 8, 8, 9, 2, 3, 2, 3, 4, 9 }
+d_score = { 0, 1, 2, 3, 10, 10, 2, 3, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7, 8, 8, 7, 7, 7, 7, 8, 8, 9, 9, 1, 1, 2, 3, 2, 3, 4, 1, 10, 10, 9, 2, 3, 2, 3, 4, 9 }
 b_score = { 0, 1, 1, 1, 4, 4, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 3, 3, 3, 3, 4, 4, 5, 5, 1, 1, 1, 1, 1, 1, 2, 1, 4, 4, 5, 1, 1, 1, 1, 2, 5 }
 s_score = { 0, 1, 2, 2, 3, 3, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 1, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 2, 2, 2, 3, 1 }
 g_score = { 0, 1, 1, 1, 1, 1 }
