@@ -39,7 +39,7 @@ drum = false
 bass = true 
 synthesizer = true
 guitar = false
-voice = true 
+voice = false
 piano = true
 
 -- verses
@@ -66,33 +66,6 @@ end
 function bass_1 ()
 	bass_0_8(pointer,high_d(),high_v(),3,0)
 	bass_0_7(pointer+200,high_d(),high_v(),3,0)
-	pointer = pointer + 400
-end
-
-function guitar_1 ()
-	guitar_0_8(pointer,high_d(),high_v(),5,2)
-	guitar_0_7(pointer+200,high_d(),high_v(),5,2)	
-	pointer = pointer + 400
-end
-
-function drums_1 ()
-	bassdrum1(pointer)
-	attack1(pointer)
-  	snare(pointer)
-	bassdrum2(pointer+25)
-	snare(pointer+25)
-	hightom(pointer+25)
-	hightom(pointer+50)
-	mediumtom(pointer+50)
-	bassdrum1(pointer+200)
-	attack1(pointer+200)
-	snare(pointer+200)
-	bassdrum2(pointer+225)
-	bassdrum1(pointer+250)
-	attack2(pointer+300)
-	snare(pointer+300)
-	snare(pointer+350)
-	snare(pointer+375)
 	pointer = pointer + 400
 end
 
@@ -153,57 +126,6 @@ function synth_2 ()
 	pointer = pointer + 1200
 end
 
-function guitar_2 ()
-	guitar_0_0(pointer,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+100,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+150,medium_d(),high_v(),5,2)
-  guitar_1_8(pointer+200,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+300,medium_d(),high_v(),5,2)
-  
-  guitar_0_0(pointer+400,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+500,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+550,medium_d(),high_v(),5,2)
-  guitar_chord_0_7(pointer+600,medium_d(),high_v(),5,2)
-  guitar_chord_0_8(pointer+650,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+700,medium_d(),high_v(),5,2)
-  
-  guitar_0_0(pointer+800,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+900,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+950,medium_d(),high_v(),5,2)
-  guitar_chord_1_8(pointer+1000,medium_d(),high_v(),5,2)
-  guitar_chord_1_7(pointer+1100,medium_d(),high_v(),5,2)
-	pointer = pointer + 1200
-end
-
-function drums_2 ()
-	cymbalconduction(pointer,400)
-	doublekick(pointer,350)
-	attack1(pointer)
-	snare(pointer+200)
-  mediumtom(pointer+250)
-	attack2(pointer+300)
-	snare(pointer+300)
-	splash(pointer+350)
-	pointer = pointer + 400
-end
-
-function drums_21 ()
-	cymbalconduction(pointer,400)
-	doublekick(pointer,350)
-	attack1(pointer)
-  snare(pointer)
-  snare(pointer+50)
-  snare(pointer+100)
-  snare(pointer+150)
-  snare(pointer+200)
-  snare(pointer+250)
-  snare(pointer+300)
-  snare(pointer+350)
-	attack2(pointer+300)
-	splash(pointer+350)
-	pointer = pointer + 400
-end
-
 function bass_3 ()
 	bass_0_0(pointer,medium_d(),high_v(),3,0)
   bass_0_0(pointer+50,medium_d(),high_v(),3,0)
@@ -224,65 +146,11 @@ function bass_3 ()
   pointer = pointer + 800
 end
 
-function guitar_3 ()
-  guitar_0_0(pointer,high_d(),high_v(),5,2)
-  guitar_1_8(pointer+100,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+150,medium_d(),high_v(),5,2)
-  guitar_0_1(pointer+200,high_d(),high_v(),5,2)
-  guitar_1_2(pointer+250,high_d(),high_v(),5,2)
-  guitar_1_8(pointer+300,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+350,high_d(),high_v(),5,2)
-  guitar_0_0(pointer+500,high_d(),high_v(),5,2)
-  guitar_1_8(pointer+600,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+650,medium_d(),high_v(),5,2)
-  guitar_0_1(pointer+700,medium_d(),high_v(),5,2)
-  guitar_1_8(pointer+750,high_d(),high_v(),5,2)
-	pointer = pointer + 800
-end
-
 function synth_3 ()
   note_f1(pointer+200,medium_d(),high_v(),4,1)
   note_f2(pointer+200,medium_d(),medium_v(),4,1)
   note_fs1(pointer+400,medium_d(),high_v(),4,1)
   note_fs2(pointer+400,medium_d(),medium_v(),4,1)
-	pointer = pointer + 800
-end
-
-function drums_3 () 
-	cymbalconduction(pointer,800)
-	attack1(pointer)
-	bassdrum1(pointer)
-	snare(pointer)
-	attack2(pointer+100)
-	bassdrum1(pointer+100)
-	snare(pointer+150)
-	bassdrum1(pointer+250)
-  viradalenta(pointer+300, 100)
-  doublekick(pointer+300, 100)
-  snare(pointer+500)
-	attack1(pointer+500)
-	bassdrum1(pointer+600)
-  bassdrum1(pointer+650)
-	snare(pointer+700)
-	pointer = pointer + 800
-end
-
-function drums_31 () 
-	cymbalconduction(pointer,800)
-	attack1(pointer)
-	bassdrum1(pointer)
-	snare(pointer)
-	attack2(pointer+100)
-	bassdrum1(pointer+100)
-	snare(pointer+150)
-	bassdrum1(pointer+250)
-  bassdrum1(pointer+400)
-  snare(pointer+500)
-	attack1(pointer+500)
-	bassdrum1(pointer+600)
-  bassdrum1(pointer+650)
-	snare(pointer+700)
-  doublekick(pointer+700, 100)
 	pointer = pointer + 800
 end
 
@@ -304,49 +172,11 @@ function bass_4 ()
 	pointer = pointer + 800
 end
 
-function guitar_4 ()
-  guitar_0_0(pointer,high_d(),high_v(),5,2)
-  guitar_1_8(pointer+100,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+150,medium_d(),high_v(),5,2)
-  guitar_0_1(pointer+200,high_d(),high_v(),5,2)
-  guitar_1_2(pointer+250,high_d(),high_v(),5,2)
-  guitar_1_8(pointer+300,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+350,high_d(),high_v(),5,2)
-  guitar_0_0(pointer+500,high_d(),high_v(),5,2)
-  guitar_1_8(pointer+600,medium_d(),high_v(),5,2)
-  guitar_1_7(pointer+650,medium_d(),high_v(),5,2)
-  guitar_0_0(pointer+700,medium_d(),high_v(),5,2)
-  guitar_1_8(pointer+750,high_d(),high_v(),5,2)
-	pointer = pointer + 800
-end
-
 function synth_4 ()
   note_f1(pointer+200,high_d(),medium_v(),4,1)
   note_f2(pointer+200,medium_d(),medium_v(),4,1)
   note_fs1(pointer+400,high_d(),medium_v(),4,1)
   note_fs2(pointer+400,medium_d(),medium_v(),4,1)
-	pointer = pointer + 800
-end
-
-function drums_4 () 
-	cymbalconduction(pointer,800)
-	bassdrum1(pointer)
-	bassdrum1(pointer+100)
-	snare(pointer+150)
-	bassdrum1(pointer+250)
-	bassdrum1(pointer+300)
-	bassdrum1(pointer+400)
-  mediumtom(pointer+400)
-  bassdrum1(pointer+450)
-	snare(pointer+500)
-	attack1(pointer+500)
-	bassdrum1(pointer+600)
-	bassdrum2(pointer+625)
-	bassdrum1(pointer+650)
-  mediumtom(pointer+650)
-	snare(pointer+700)
-	attack2(pointer+700)
-	snare(pointer+750)
 	pointer = pointer + 800
 end
 
@@ -370,10 +200,10 @@ my_score = { 92, -- tempo
 }
 
 -- song structure
-d_score = {0,1,21,2,2,1,2,2,2,1,2,2,21,1,3,4,31,4,31,4,3,4,21,21,2,1,2,2,2,1,21,21,21,1}
+d_score = {0}
 b_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 s_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
-g_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+g_score = {0}
 p_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
 v_score = {0,1}
 
