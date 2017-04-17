@@ -122,3 +122,23 @@ end
 function bass_2_2 (timeline, noteduration, notevelocity, position, channel)
 	note_e3 (timeline, noteduration, notevelocity, position, channel)
 end
+
+function bass_2_3 (timeline, noteduration, notevelocity, position, channel)
+	note_f3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function bass_2_4 (timeline, noteduration, notevelocity, position, channel)
+	note_fs3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function bass_2_5 (timeline, noteduration, notevelocity, position, channel)
+	note_g3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function bass_2_6 (timeline, noteduration, notevelocity, position, channel)
+	note_gs3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function bass_2_7 (timeline, noteduration, notevelocity, position, channel)
+	note_a3 (timeline, noteduration, notevelocity, position, channel)
+end

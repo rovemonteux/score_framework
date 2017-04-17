@@ -28,10 +28,41 @@ function piano_chord_e1 (timeline, noteduration, notevelocity, position, channel
         note_e2 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function piano_chord_minor_e1 (timeline, noteduration, notevelocity, position, channel)
+        note_e1 (timeline, noteduration, notevelocity, position, channel)
+        note_g1 (timeline, noteduration, notevelocity, position, channel)
+        note_b1 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_minor7_e1 (timeline, noteduration, notevelocity, position, channel)
+        note_e1 (timeline, noteduration, notevelocity, position, channel)
+        note_g1 (timeline, noteduration, notevelocity, position, channel)
+        note_b1 (timeline, noteduration, notevelocity, position, channel)
+        note_d2 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function piano_fullchord_e1 (timeline, noteduration, notevelocity, position, channel)
 	note_e1 (timeline, noteduration, notevelocity, position, channel)
 	note_e2 (timeline, noteduration, notevelocity, position, channel)
 	note_e3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_diminished_b1 (timeline, noteduration, notevelocity, position, channel)
+	note_b1 (timeline, noteduration, notevelocity, position, channel)
+	note_d2 (timeline, noteduration, notevelocity, position, channel)
+	note_f2 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_minor7_b1 (timeline, noteduration, notevelocity, position, channel)
+	note_b1 (timeline, noteduration, notevelocity, position, channel)
+	note_d2 (timeline, noteduration, notevelocity, position, channel)
+	note_f2 (timeline, noteduration, notevelocity, position, channel)
+  note_c3 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_b1 (timeline, noteduration, notevelocity, position, channel)
+	note_b1 (timeline, noteduration, notevelocity, position, channel)
+	note_b2 (timeline, noteduration, notevelocity, position, channel)
 end
 
 function piano_fullchord_b1 (timeline, noteduration, notevelocity, position, channel)
@@ -143,6 +174,19 @@ function piano_fullchord_d2 (timeline, noteduration, notevelocity, position, cha
         note_d2 (timeline, noteduration, notevelocity, position, channel)
         note_d3 (timeline, noteduration, notevelocity, position, channel)
         note_d4 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_fullchord_ds2 (timeline, noteduration, notevelocity, position, channel)
+        note_ds2 (timeline, noteduration, notevelocity, position, channel)
+        note_ds3 (timeline, noteduration, notevelocity, position, channel)
+        note_ds4 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_chord_minor7_e2 (timeline, noteduration, notevelocity, position, channel)
+        note_e2 (timeline, noteduration, notevelocity, position, channel)
+        note_g2 (timeline, noteduration, notevelocity, position, channel)
+        note_b2 (timeline, noteduration, notevelocity, position, channel)
+        note_d3 (timeline, noteduration, notevelocity, position, channel)
 end
 
 function piano_fullchord_e2 (timeline, noteduration, notevelocity, position, channel)
@@ -288,6 +332,12 @@ function piano_chord_e3 (timeline, noteduration, notevelocity, position, channel
 	note_e4 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function piano_fullchord_e3 (timeline, noteduration, notevelocity, position, channel)
+	note_e3 (timeline, noteduration, notevelocity, position, channel)
+	note_e4 (timeline, noteduration, notevelocity, position, channel)
+  note_e5 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function piano_f3 (timeline, noteduration, notevelocity, position, channel)
 	note_f3 (timeline, noteduration, notevelocity, position, channel)
 end
@@ -329,6 +379,10 @@ function piano_chord_fs4 (timeline, noteduration, notevelocity, position, channe
 	note_fs5 (timeline, noteduration, notevelocity, position, channel)
 end
 
+function piano_g4 (timeline, noteduration, notevelocity, position, channel)
+        note_g4 (timeline, noteduration, notevelocity, position, channel)
+end
+
 function piano_gs4 (timeline, noteduration, notevelocity, position, channel)
         note_gs4 (timeline, noteduration, notevelocity, position, channel)
 end
@@ -354,4 +408,32 @@ end
 function piano_chord_c5 (timeline, noteduration, notevelocity, position, channel)
         note_c5 (timeline, noteduration, notevelocity, position, channel)
 	note_c6 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_d5 (timeline, noteduration, notevelocity, position, channel)
+        note_d5 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_ds5 (timeline, noteduration, notevelocity, position, channel)
+        note_ds5 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_e5 (timeline, noteduration, notevelocity, position, channel)
+        note_e5 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_g5 (timeline, noteduration, notevelocity, position, channel)
+        note_g5 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_gs5 (timeline, noteduration, notevelocity, position, channel)
+        note_gs5 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_a5 (timeline, noteduration, notevelocity, position, channel)
+        note_a5 (timeline, noteduration, notevelocity, position, channel)
+end
+
+function piano_as5 (timeline, noteduration, notevelocity, position, channel)
+        note_as5 (timeline, noteduration, notevelocity, position, channel)
 end

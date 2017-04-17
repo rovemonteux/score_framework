@@ -20,6 +20,14 @@ package.path = package.path .. ";../?.lua"
 require 'data/velocity'
 require 'data/duration'
 
+function note_d1 (timeline, noteduration, notevelocity, position, channel)
+	table.insert(my_score[position], {'note', timeline, noteduration, channel, 26, notevelocity})
+end
+
+function note_ds1 (timeline, noteduration, notevelocity, position, channel)
+	table.insert(my_score[position], {'note', timeline, noteduration, channel, 27, notevelocity})
+end
+
 function note_e1 (timeline, noteduration, notevelocity, position, channel)
 	table.insert(my_score[position], {'note', timeline, noteduration, channel, 28, notevelocity})
 end
@@ -200,6 +208,18 @@ function note_c5 (timeline, noteduration, notevelocity, position, channel)
         table.insert(my_score[position], {'note', timeline, noteduration, channel, 72, notevelocity})
 end
 
+function note_cs5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 73, notevelocity})
+end
+
+function note_d5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 74, notevelocity})
+end
+
+function note_ds5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 75, notevelocity})
+end
+
 function note_e5 (timeline, noteduration, notevelocity, position, channel)
         table.insert(my_score[position], {'note', timeline, noteduration, channel, 76, notevelocity})
 end
@@ -219,6 +239,14 @@ end
 
 function note_gs5 (timeline, noteduration, notevelocity, position, channel)
         table.insert(my_score[position], {'note', timeline, noteduration, channel, 80, notevelocity})
+end
+
+function note_a5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 81, notevelocity})
+end
+
+function note_as5 (timeline, noteduration, notevelocity, position, channel)
+        table.insert(my_score[position], {'note', timeline, noteduration, channel, 82, notevelocity})
 end
 
 function note_b5 (timeline, noteduration, notevelocity, position, channel)

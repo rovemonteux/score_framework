@@ -120,25 +120,61 @@ end
 
 function piano_3 ()
  
-	 	piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
-	piano_f1(pointer+25,high_d(),high_v(),6,3)
-	piano_fs1(pointer+50,high_d(),high_v(),6,3)
-	piano_f1(pointer+75,high_d(),high_v(),6,3)
+ piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
 	 	 	
-	piano_fullchord_f1(pointer+200,high_d(),high_v(),6,3)
+	piano_fullchord_f1(pointer+200,low_d(),high_v(),6,3)
 	piano_fs1(pointer+225,high_d(),high_v(),6,3)
 	piano_g1(pointer+250,high_d(),high_v(),6,3)
+  piano_g4(pointer+250,high_d(),high_v(),6,3)
 	piano_fs1(pointer+275,high_d(),high_v(),6,3)
 	
-	 	piano_fullchord_fs1(pointer+400,high_d(),high_v(),6,3)
+  piano_fullchord_fs1(pointer+400,low_d(),high_v(),6,3)
 	piano_g1(pointer+425,high_d(),high_v(),6,3)
 	piano_gs1(pointer+450,high_d(),high_v(),6,3)
+  piano_gs4(pointer+425,high_d(),high_v(),6,3)
 	piano_g1(pointer+475,high_d(),high_v(),6,3)
-	pointer = pointer + 800
+	
+  piano_fullchord_g1(pointer+600,medium_d(),high_v(),6,3)
+  piano_fullchord_gs1(pointer+650,medium_d(),high_v(),6,3)
+  piano_fullchord_g1(pointer+700,medium_d(),high_v(),6,3)
+  piano_fullchord_as1(pointer+750,medium_d(),high_v(),6,3)
+  
+  piano_g5(pointer+600,medium_d(),medium_v(),6,3)
+  piano_gs5(pointer+625,medium_d(),low_v(),6,3)
+  piano_g5(pointer+650,medium_d(),medium_v(),6,3)
+  piano_gs5(pointer+675,medium_d(),low_v(),6,3)
+  piano_g5(pointer+700,medium_d(),low_v(),6,3)
+  piano_gs5(pointer+725,medium_d(),medium_v(),6,3)
+  piano_g5(pointer+750,medium_d(),medium_v(),6,3)
+  piano_gs5(pointer+760,low_d(),medium_v(),6,3)
+  piano_as5(pointer+775,medium_d(),medium_v(),6,3)
+  piano_gs5(pointer+790,low_d(),low_v(),6,3)
+  
+  pointer = pointer + 800
+  
 end
 
 function piano_4 ()
 	
+  piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
+	 	 	
+	piano_fullchord_f1(pointer+200,low_d(),high_v(),6,3)
+	piano_fs1(pointer+225,high_d(),high_v(),6,3)
+  piano_fs4(pointer+225,high_d(),high_v(),6,3)
+	piano_g1(pointer+250,high_d(),high_v(),6,3)
+	piano_fs1(pointer+275,high_d(),high_v(),6,3)
+	
+  piano_fullchord_fs1(pointer+400,low_d(),high_v(),6,3)
+	piano_g1(pointer+425,high_d(),high_v(),6,3)
+	piano_gs1(pointer+450,high_d(),high_v(),6,3)
+  piano_gs4(pointer+450,high_d(),high_v(),6,3)
+	piano_g1(pointer+475,high_d(),high_v(),6,3)
+  
+  piano_fullchord_as1(pointer+600,high_d(),high_v(),6,3)
+  piano_fullchord_a1(pointer+700,high_d(),high_v(),6,3)
+  
+  piano_a5(pointer+700,high_d(),medium_v(),6,3)
+  
 	pointer = pointer + 800
 end
 
@@ -196,6 +232,202 @@ function synth_4 ()
 	pointer = pointer + 800
 end
 
+function bass_5 ()
+  bass_0_0(pointer,veryhigh_d(),high_v(),3,0)
+  pointer = pointer + 400
+end
+
+function synth_5 ()
+  note_e1(pointer,high_d(),high_v(),4,1)
+  note_e1(pointer+200,veryhigh_d(),high_v(),4,1)
+	pointer = pointer + 400
+end
+
+function piano_5 ()
+  piano_chord_f1(pointer,high_d(),high_v(),6,3)
+  piano_chord_minor_e1(pointer+300,low_d(),medium_v(),6,3)
+  piano_chord_minor_e1(pointer+350,veryhigh_d(),high_v(),6,3)
+  pointer = pointer + 400
+end
+
+function bass_6 ()
+  bass_1_6(pointer,low_d(),high_v(),3,0)
+  bass_1_6(pointer+60,low_d(),high_v(),3,0)
+  bass_1_6(pointer+120,low_d(),high_v(),3,0)
+  bass_1_5(pointer+180,low_d(),high_v(),3,0)
+  bass_1_5(pointer+240,low_d(),high_v(),3,0)
+  bass_1_5(pointer+300,low_d(),high_v(),3,0)
+  pointer = pointer + 400
+end
+
+function piano_6 ()
+
+  pointer = pointer + 400
+end
+
+function synth_6 ()
+  note_ds1(pointer,high_d(),high_v(),4,1)
+  note_ds1(pointer,high_d(),high_v(),4,1)
+  note_d1(pointer+180,veryhigh_d(),high_v(),4,1)
+  pointer = pointer + 400
+end
+
+function bass_7 ()
+  pointer = pointer + 400
+end
+
+function piano_7 ()
+  pointer = pointer + 400
+end
+
+function synth_7 ()
+  pointer = pointer + 400
+end
+
+function bass_8 ()
+  bass_1_7(pointer,low_d(),high_v(),3,0)
+  bass_1_7(pointer+25,low_d(),high_v(),3,0)
+  bass_1_7(pointer+50,low_d(),high_v(),3,0)
+  bass_1_7(pointer+75,low_d(),high_v(),3,0)
+  
+  pointer = pointer + 100
+end
+
+function piano_8 ()
+  piano_chord_minor7_e1(pointer,high_d(),low_v(),6,3)
+  pointer = pointer + 100
+end
+
+function piano_81 ()
+  piano_chord_minor_e1(pointer,high_d(),low_v(),6,3)
+  pointer = pointer + 100
+end
+
+function synth_8 ()
+  note_e1(pointer,high_d(),high_v(),4,1)
+  pointer = pointer + 100
+end
+
+function bass_9 ()
+  pointer = pointer + 25
+end
+
+function piano_9 ()
+  pointer = pointer + 25
+end
+
+function synth_9 ()
+  pointer = pointer + 25
+end
+
+function bass_10 ()
+  bass_0_0(pointer,low_d(),high_v(),3,0)
+  bass_0_0(pointer+25,low_d(),high_v(),3,0)
+  bass_0_0(pointer+50,low_d(),high_v(),3,0)
+  bass_0_0(pointer+75,low_d(),high_v(),3,0)
+  
+  bass_0_0(pointer+100,low_d(),high_v(),3,0)
+  bass_0_0(pointer+125,low_d(),high_v(),3,0)
+  bass_0_0(pointer+150,low_d(),high_v(),3,0)
+  bass_0_0(pointer+175,low_d(),high_v(),3,0)
+  
+  bass_1_8(pointer+250,low_d(),high_v(),3,0)
+  bass_1_5(pointer+300,low_d(),high_v(),3,0)
+  bass_1_7(pointer+350,medium_d(),high_v(),3,0)
+  
+  pointer = pointer + 400
+end
+
+function piano_10 ()
+  piano_chord_f2(pointer+250,low_d(),low_v(),6,3)
+  piano_chord_d2(pointer+300,low_d(),low_v(),6,3)
+  piano_chord_e2(pointer+350,medium_d(),low_v(),6,3)
+  pointer = pointer + 400
+end
+
+function synth_10 ()
+  note_e1(pointer,high_d(),high_v(),4,1)
+  note_f1(pointer+250,high_d(),high_v(),4,1)
+  pointer = pointer + 400
+end
+
+function bass_11 ()
+  bass_0_0(pointer,low_d(),high_v(),3,0)
+  bass_0_0(pointer+25,low_d(),high_v(),3,0)
+  bass_0_0(pointer+50,low_d(),high_v(),3,0)
+  bass_0_0(pointer+75,low_d(),high_v(),3,0)
+  
+  bass_1_5(pointer+100,low_d(),high_v(),3,0)
+  bass_1_8(pointer+150,low_d(),high_v(),3,0)
+  bass_1_7(pointer+200,medium_d(),high_v(),3,0)
+  
+  pointer = pointer + 300
+end
+
+function piano_11 ()
+  piano_chord_d2(pointer+100,low_d(),low_v(),6,3)
+  piano_chord_f2(pointer+150,low_d(),low_v(),6,3)
+  piano_chord_e2(pointer+200,medium_d(),low_v(),6,3)
+  pointer = pointer + 300
+end
+
+function synth_11 ()
+  note_e1(pointer,high_d(),high_v(),4,1)
+  note_d1(pointer+100,high_d(),high_v(),4,1)
+  pointer = pointer + 300
+end
+
+function bass_12 ()
+  bass_0_0(pointer,low_d(),high_v(),3,0)
+  bass_0_0(pointer+25,low_d(),high_v(),3,0)
+  bass_0_0(pointer+50,low_d(),high_v(),3,0)
+  bass_0_0(pointer+75,low_d(),high_v(),3,0)
+  
+  bass_1_8(pointer+100,low_d(),high_v(),3,0)
+  bass_1_5(pointer+150,low_d(),high_v(),3,0)
+  bass_1_7(pointer+200,medium_d(),high_v(),3,0)
+  
+  pointer = pointer + 300
+end
+
+function piano_12 ()
+  piano_chord_f2(pointer+100,low_d(),low_v(),6,3)
+  piano_chord_d2(pointer+150,low_d(),low_v(),6,3)
+  piano_chord_e2(pointer+200,medium_d(),low_v(),6,3)
+  pointer = pointer + 300
+end
+
+function synth_12 ()
+  note_e1(pointer,high_d(),high_v(),4,1)
+  note_f1(pointer+100,high_d(),high_v(),4,1)
+  pointer = pointer + 300
+end
+
+function bass_13 ()
+  bass_0_0(pointer,low_d(),high_v(),3,0)
+  bass_0_0(pointer+25,low_d(),high_v(),3,0)
+  bass_0_0(pointer+50,low_d(),high_v(),3,0)
+  bass_0_0(pointer+75,low_d(),high_v(),3,0)
+  
+  bass_2_7(pointer+100,low_d(),high_v(),3,0)
+  bass_2_7(pointer+150,low_d(),high_v(),3,0)
+  bass_2_7(pointer+200,low_d(),high_v(),3,0)
+  bass_2_7(pointer+250,medium_d(),high_v(),3,0)
+  
+  pointer = pointer + 350
+end
+
+function piano_13 ()
+  piano_fullchord_e3(pointer+100,low_d(),low_v(),6,3)
+  pointer = pointer + 300
+end
+
+function synth_13 ()
+  note_e1(pointer,high_d(),high_v(),4,1)
+  note_a1(pointer+100,high_d(),high_v(),4,1)
+  pointer = pointer + 350
+end
+
 -- tempo and instruments
 my_score = { 92, -- tempo
 { -- drums, position 2, channel 9
@@ -217,10 +449,10 @@ my_score = { 92, -- tempo
 
 -- song structure
 d_score = {0}
-b_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
-s_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+b_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1,5,6,7,6,7,6,7,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,10,11,12,13,10,11,12,13,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,10,11,12,13,10,11,12,13,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6}
+s_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1,5,6,7,6,7,6,7,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,10,11,12,13,10,11,12,13,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,10,11,12,13,10,11,12,13,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6,8,8,8,9,6}
 g_score = {0}
-p_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1}
+p_score = {0,1,2,1,2,1,2,1,3,4,3,4,3,4,3,4,2,1,2,1,2,1,5,6,7,6,7,6,7,8,81,8,9,6,8,81,8,9,6,8,81,8,9,6,8,81,8,9,6,10,11,12,13,10,11,12,13,8,81,8,9,6,8,81,8,9,6,8,81,8,9,6,8,81,8,9,6,10,11,12,13,10,11,12,13,8,81,8,9,6,8,8,8,9,6,8,81,8,9,6,8,81,8,9,6}
 v_score = {0,1}
 
 -- write MIDI file

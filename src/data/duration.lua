@@ -31,6 +31,11 @@ function high_d ()
 	return math.random(201, 400)
 end
 
+function veryhigh_d ()
+	duration_randomseed()
+	return math.random(401, 600)
+end
+
 function duration_randomseed ()
 
 end
