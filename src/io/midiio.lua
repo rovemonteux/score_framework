@@ -74,14 +74,18 @@ function write_midi ()
 end
 
 function audio_process()
+if (drum) then
 os.execute("timidity --output-24bit drums_"..score_name..".mid -OwS -k0 -a -o drums_"..score_name..".wav")
+end
 os.execute("timidity --output-24bit bass_"..score_name..".mid -OwS -k0 -a -o bass_"..score_name..".wav")
 os.execute("timidity --output-24bit synth_"..score_name..".mid -OwS -k0 -a -o synth_"..score_name..".wav")
 if (guitar) then
 os.execute("timidity --output-24bit guitar_"..score_name..".mid -OwS -k0 -a -o guitar_"..score_name..".wav")
 end
 os.execute("timidity --output-24bit piano_"..score_name..".mid -OwS -k0 -a -o piano_"..score_name..".wav")
+if (drum) then
 os.execute("sox --norm drums_"..score_name..".wav -b 24 drums_"..score_name.."-temp.wav equalizer 300 1000 8 equalizer 4000 500 5 equalizer 10000 2000 -22 rate 48000 dither -s -a")
+end
 os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 200 1000 16 equalizer 300 500 6 equalizer 14000 2000 -32 overdrive 4 80 rate 48000 dither -s -a")
 os.execute("sox --norm bass_"..score_name.."-temp.wav -b 24 bass_"..score_name..".wav rate 48000 dither -s -a")
 os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 10000 2000 -20 bass 14 rate 48000 dither -s -a")
@@ -122,7 +126,7 @@ os.execute("sox -m "..score_name..".wav guitar_"..score_name.."-trim-temp.wav ".
 os.execute("mv "..score_name.."-plus-guitar-temp.wav "..score_name..".wav")
 end
 -- os.execute("sox "..score_name..".wav -n spectogram -o "..score_name..".png")
-os.execute("lame -q0 -b256 "..score_name..".wav "..score_name..".mp3")
+os.execute("lame -q0 -b256 "..score_name..".wav rove_monteux-"..score_name..".mp3")
 end
 
 function save(prefix,filename,score)

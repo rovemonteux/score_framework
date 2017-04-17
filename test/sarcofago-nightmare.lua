@@ -82,14 +82,6 @@ function piano_2 ()
 	pointer = pointer + 1200
 end
 
-function piano_3 ()
-	pointer = pointer + 800
-end
-
-function piano_4 ()
-	pointer = pointer + 800
-end
-
 function bass_2 ()
   bass_0_0(pointer,high_d(),high_v(),3,0)
   bass_0_0(pointer+100,medium_d(),high_v(),3,0)
@@ -124,6 +116,30 @@ function synth_2 ()
   note_f4(pointer+1000,medium_d(),low_v(),4,1)
   note_e4(pointer+1100,medium_d(),low_v(),4,1)
 	pointer = pointer + 1200
+end
+
+function piano_3 ()
+ 
+	 	piano_fullchord_e1(pointer,high_d(),high_v(),6,3)
+	piano_f1(pointer+25,high_d(),high_v(),6,3)
+	piano_fs1(pointer+50,high_d(),high_v(),6,3)
+	piano_f1(pointer+75,high_d(),high_v(),6,3)
+	 	 	
+	piano_fullchord_f1(pointer+200,high_d(),high_v(),6,3)
+	piano_fs1(pointer+225,high_d(),high_v(),6,3)
+	piano_g1(pointer+250,high_d(),high_v(),6,3)
+	piano_fs1(pointer+275,high_d(),high_v(),6,3)
+	
+	 	piano_fullchord_fs1(pointer+400,high_d(),high_v(),6,3)
+	piano_g1(pointer+425,high_d(),high_v(),6,3)
+	piano_gs1(pointer+450,high_d(),high_v(),6,3)
+	piano_g1(pointer+475,high_d(),high_v(),6,3)
+	pointer = pointer + 800
+end
+
+function piano_4 ()
+	
+	pointer = pointer + 800
 end
 
 function bass_3 ()
