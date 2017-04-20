@@ -88,9 +88,9 @@ os.execute("sox --norm drums_"..score_name..".wav -b 24 drums_"..score_name.."-t
 end
 os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 200 1000 16 equalizer 300 500 6 equalizer 14000 2000 -32 overdrive 4 80 rate 48000 dither -s -a")
 os.execute("sox --norm bass_"..score_name.."-temp.wav -b 24 bass_"..score_name..".wav rate 48000 dither -s -a")
-os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 10000 2000 -20 bass 21 rate 48000 dither -s -a")
-os.execute("sox -v 0.6 synth_"..score_name..".wav -b 24 synth_"..score_name.."-temp.wav equalizer 2000 200 2 contrast 18 overdrive 1 100 rate 48000 dither -s -a")
-os.execute("sox -v 1.4 piano_"..score_name..".wav -b 24 piano_"..score_name.."-temp.wav contrast 7 overdrive 5 100 echos 0.8 0.9 120 0.25 rate 48000 dither -s -a")
+os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 10000 2000 -20 bass 32 rate 48000 dither -s -a")
+os.execute("sox -v 0.6 synth_"..score_name..".wav -b 24 synth_"..score_name.."-temp.wav equalizer 12000 1000 4 contrast 18 overdrive 1 100 bass -4 rate 48000 dither -s -a")
+os.execute("sox -v 1.4 piano_"..score_name..".wav -b 24 piano_"..score_name.."-temp.wav contrast 7 overdrive 5 100 echos 0.8 0.9 120 0.25 bass -4 rate 48000 dither -s -a")
 if (guitar) then
 os.execute("sox guitar_"..score_name..".wav -b 24 guitar_"..score_name.."-temp.wav treble 20 contrast 100 overdrive 68 100 rate 48000 dither -s -a")
 os.execute("sox guitar_"..score_name.."-temp.wav -b 24 guitar_"..score_name..".wav contrast 100 overdrive 68 100 bass 20 rate 48000 dither -s -a")
@@ -117,7 +117,7 @@ local trim_factor = bpm_to_tempo[my_score[1]] / 300
 print("tempo: "..my_score[1]..", trim factor: "..trim_factor)
 print("Trim factor: "..trim_factor)
 os.execute("sox "..score_name.."-temp.wav "..score_name.."-trim-temp.wav trim "..trim_factor.." rate 48000 dither -s -a")
-os.execute("sox --norm "..score_name.."-trim-temp.wav "..score_name..".wav rate 48000 bass -3 equalizer 4000 2000 4 lowpass -1 17801 compand .1,.3 9:-10,-0.3,-9 -6 -90 .1 reverb 1 dither -s -a")
+os.execute("sox --norm "..score_name.."-trim-temp.wav "..score_name..".wav rate 48000 equalizer 4000 2000 4 lowpass -1 17801 compand .1,.3 9:-10,-0.3,-9 -6 -90 .1 reverb 1 dither -s -a")
 os.execute("sox -v 0.7 "..score_name..".wav "..score_name.."-temp.wav rate 48000 dither -s -a")
 os.execute("sox --norm "..score_name.."-temp.wav "..score_name..".wav rate 48000 pad 1 dither -s -a")
 if (guitar) then
