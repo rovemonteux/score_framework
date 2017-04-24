@@ -36,7 +36,7 @@ score_name = "mortuary"
 pointer = 0
 
 -- instrument output
-drum = false
+drum = true 
 bass = true 
 synthesizer = true
 guitar = false 
