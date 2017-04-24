@@ -88,8 +88,8 @@ os.execute("sox --norm drums_"..score_name..".wav -b 24 drums_"..score_name.."-t
 end
 os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 200 1000 16 equalizer 300 500 6 equalizer 14000 2000 -32 overdrive 4 80 rate 48000 dither -s -a")
 os.execute("sox --norm bass_"..score_name.."-temp.wav -b 24 bass_"..score_name..".wav rate 48000 dither -s -a")
-os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 10000 2000 -20 bass 32 rate 48000 dither -s -a")
-os.execute("sox -v 0.6 synth_"..score_name..".wav -b 24 synth_"..score_name.."-temp.wav equalizer 12000 1000 4 contrast 18 overdrive 1 100 bass -4 rate 48000 dither -s -a")
+os.execute("sox --norm bass_"..score_name..".wav -b 24 bass_"..score_name.."-temp.wav equalizer 10000 2000 -20 bass 36 rate 48000 dither -s -a")
+os.execute("sox -v 0.4 synth_"..score_name..".wav -b 24 synth_"..score_name.."-temp.wav equalizer 8000 400 6 contrast 1 overdrive 8 50 bass -5 echos 0.8 0.9 240 0.50 rate 48000 dither -s -a")
 os.execute("sox -v 1.4 piano_"..score_name..".wav -b 24 piano_"..score_name.."-temp.wav contrast 7 overdrive 5 100 echos 0.8 0.9 120 0.25 bass -4 rate 48000 dither -s -a")
 if (guitar) then
 os.execute("sox guitar_"..score_name..".wav -b 24 guitar_"..score_name.."-temp.wav treble 20 contrast 100 overdrive 68 100 rate 48000 dither -s -a")
