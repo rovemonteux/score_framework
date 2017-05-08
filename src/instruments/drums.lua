@@ -154,7 +154,12 @@ function drum_1_2_lento (timeline, timelenght)
 	for i=timeline,timeline+timelenght,200
 	do 
 		bassdrum2(i-200)
+		bassdrum1(i-150)
+		bassdrum2(i-135)
+		bassdrum1(i-120)
 		snare(i-100)
+		bassdrum1(i-50)
+		bassdrum2(i-25)
 	end
 end
 
@@ -167,6 +172,17 @@ function virada (timeline, timelenght)
     mediumtom(i)
     lowtom(i) 
 	end
+end
+
+function viradacomfim (i, timelenght)
+                hightom(i-75)
+    hightom(i-50)
+    mediumtom(i-25)
+    mediumtom(i)
+    lowtom(i)
+	snare(i-25)
+	snare(i-15)
+	attack2(i-5)
 end
 
 function viradalenta (timeline, timelenght)
@@ -192,11 +208,19 @@ function viradacurta (timeline, timelenght)
 	end
 end
 
+function fimdeporrada (i, timelength)
+        	hightom(i-40)
+		hightom(i-30)
+		mediumtom(i-20)
+		mediumtom(i-10)
+		lowtom(i)	
+end
+
 function porradaria (timeline, timelenght)
-	for i=timeline,timeline+timelenght,50
+	for i=timeline,timeline+timelenght,20
 	do 	  
- 	    bassdrum2(i-25)
-	    snare(i)
+ 	    bassdrum2(i)
+	    snare(i+10)
 	end
 end
 

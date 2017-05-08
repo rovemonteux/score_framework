@@ -246,7 +246,7 @@ end
 function piano_5 ()
   piano_chord_f1(pointer,high_d(),high_v(),6,3)
   piano_chord_minor_e1(pointer+300,low_d(),medium_v(),6,3)
-  piano_chord_minor_e1(pointer+350,veryhigh_d(),high_v(),6,3)
+  piano_chord_e3(pointer+350,veryhigh_d(),high_v(),6,3)
   pointer = pointer + 400
 end
 
@@ -341,7 +341,10 @@ end
 function piano_10 ()
   piano_chord_f2(pointer+250,low_d(),low_v(),6,3)
   piano_chord_d2(pointer+300,low_d(),low_v(),6,3)
-  piano_chord_e2(pointer+350,medium_d(),low_v(),6,3)
+  piano_chord_e3(pointer+350,medium_d(),low_v(),6,3)
+  piano_d3(pointer+360,low_d(),low_v(),6,3)
+  piano_d4(pointer+370,low_d(),low_v(),6,3)
+  piano_e3(pointer+380,medium_d(),low_v(),6,3)
   pointer = pointer + 400
 end
 
@@ -367,7 +370,7 @@ end
 function piano_11 ()
   piano_chord_d2(pointer+100,low_d(),low_v(),6,3)
   piano_chord_f2(pointer+150,low_d(),low_v(),6,3)
-  piano_chord_e2(pointer+200,medium_d(),low_v(),6,3)
+  piano_chord_e3(pointer+200,medium_d(),low_v(),6,3)
   pointer = pointer + 300
 end
 
@@ -419,6 +422,7 @@ end
 
 function piano_13 ()
   piano_fullchord_e3(pointer+100,low_d(),low_v(),6,3)
+  piano_chord_e1(pointer+200,medium_d(),medium_v(),6,3)
   pointer = pointer + 300
 end
 
